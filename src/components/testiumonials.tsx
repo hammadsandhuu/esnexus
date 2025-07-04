@@ -59,14 +59,10 @@ const testimonials = [
 export default function GlassmorphismTestimonials() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
 
   React.useEffect(() => {
-    if (!api) {
-      return;
-    }
+    if (!api) return;
 
-    setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => {
@@ -75,11 +71,11 @@ export default function GlassmorphismTestimonials() {
   }, [api]);
 
   return (
-    <div className="min-h-screen  py-20 px-6">
+    <div className="min-h-screen py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
-          {/* 3D Glassmorphic Heart Icon */}
+          {/* Icon */}
           <div className="flex justify-center mb-8">
             <div className="relative">
               <Image
@@ -87,7 +83,7 @@ export default function GlassmorphismTestimonials() {
                 height={200}
                 src="https://framerusercontent.com/images/NlwVunhuEfyN5DjaTrQr5ki0.svg"
                 alt="Heart Icon"
-                className=" w-20 drop-shadow-2xl"
+                className="w-20 drop-shadow-2xl"
                 style={{
                   filter: "drop-shadow(0 0 20px rgba(168, 85, 247, 0.5))",
                 }}
@@ -95,14 +91,14 @@ export default function GlassmorphismTestimonials() {
             </div>
           </div>
 
-          {/* Testimonials Label */}
+          {/* Label */}
           <div className="flex items-center justify-center gap-4 mb-6">
             <div className="w-2 h-2 bg-white rotate-45"></div>
             <span className="text-white text-lg font-medium">Testimonials</span>
             <div className="w-2 h-2 bg-white rotate-45"></div>
           </div>
 
-          {/* Main Heading */}
+          {/* Heading */}
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             They Love What We Do
           </h1>
@@ -119,7 +115,7 @@ export default function GlassmorphismTestimonials() {
           </div>
         </div>
 
-        {/* Testimonials Carousel using shadcn */}
+        {/* Carousel */}
         <div className="max-w-7xl mx-auto relative">
           <Carousel
             setApi={setApi}
@@ -140,7 +136,7 @@ export default function GlassmorphismTestimonials() {
                     <div className="flex justify-center px-2">
                       <div
                         className={`w-full max-w-lg transition-all duration-500 ${
-                          isCenter ? " z-10" : " opacity-40 blur-sm"
+                          isCenter ? "z-10" : "opacity-40 blur-sm"
                         }`}
                       >
                         <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-2xl min-h-[320px]">
@@ -162,7 +158,7 @@ export default function GlassmorphismTestimonials() {
                             </div>
                           </div>
 
-                          {/* Quote Icon */}
+                          {/* Quote */}
                           <div className="mb-4">
                             <Quote
                               width={32}
@@ -171,7 +167,7 @@ export default function GlassmorphismTestimonials() {
                             />
                           </div>
 
-                          {/* Testimonial Text */}
+                          {/* Text */}
                           <p className="text-white text-base leading-relaxed mb-4">
                             {testimonial.text}
                           </p>
@@ -195,11 +191,11 @@ export default function GlassmorphismTestimonials() {
               })}
             </CarouselContent>
 
-            {/* Navigation arrows - keeping them inside Carousel */}
+            {/* Controls */}
             <div className="flex items-center justify-center gap-4 mt-8">
               <CarouselPrevious className="bg-white/10 hover:bg-white/20 border-white/20 text-white relative left-0 translate-y-0" />
 
-              {/* Dots Navigation */}
+              {/* Dots */}
               <div className="flex gap-2 mx-4">
                 {testimonials.map((_, index) => (
                   <button
