@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function FAQ() {
   return (
-    <div className="min-h-screen py-20 px-8">
+    <div id="integrations" className="min-h-screen py-20 px-8">
       <div className="max-w-4xl mx-auto text-center">
         {/* FAQ Icon with Dotted Pattern */}
         <div className="relative mb-8 flex justify-center">

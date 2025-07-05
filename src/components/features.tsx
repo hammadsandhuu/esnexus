@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function Features() {
   return (
-    <div className="relative min-h-screen overflow-hidden">
+    <div id="features" className="relative min-h-screen overflow-hidden">
       {/* Background stars */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-1/4 w-1 h-1 bg-white rounded-full opacity-60 animate-pulse"></div>

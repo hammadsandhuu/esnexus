@@ -10,10 +10,10 @@ const fadeUp = {
   transition: { duration: 0.6 },
 };
 
-export default function Component() {
+export default function ResponsiveAISection() {
   return (
-    <div className="min-h-screen pb-8">
-      <div className="relative py-20  px-8">
+    <div id="about" className="min-h-screen pb-8">
+      <div className="relative py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
         <motion.div
           className="max-w-4xl mx-auto text-center"
           initial="initial"
@@ -21,21 +21,23 @@ export default function Component() {
           viewport={{ once: true }}
         >
           {/* Glowing Orb */}
-          <motion.div className="relative mb-8 flex justify-center" {...fadeUp}>
-            <div className="relative w-48 h-48">
+          <motion.div
+            className="relative mb-6 sm:mb-8 flex justify-center"
+            {...fadeUp}
+          >
+            <div className="relative w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-48 lg:h-48">
               <Image
                 src="https://framerusercontent.com/images/eFdCzowvaMtiH5jFCxXsXeJJpu4.svg"
                 alt="AI Hero Image"
-                width={192}
-                height={192}
+                fill
                 className="object-cover rounded-full"
               />
             </div>
 
-            {/* Dotted Pattern */}
-            <div className="absolute top-16 -z-10 opacity-30">
-              <div className="grid grid-cols-8 gap-2">
-                {Array.from({ length: 64 }).map((_, i) => (
+            {/* Dotted Pattern - Hidden on mobile */}
+            <div className="absolute top-8 sm:top-12 -z-10 opacity-30 hidden md:block">
+              <div className="grid grid-cols-6 sm:grid-cols-8 gap-1 sm:gap-2">
+                {Array.from({ length: 48 }).map((_, i) => (
                   <div
                     key={i}
                     className="w-1 h-1 bg-white rounded-full opacity-50"
@@ -47,22 +49,22 @@ export default function Component() {
 
           {/* Badge */}
           <motion.div
-            className="flex items-center justify-center mb-12 w-full"
+            className="flex items-center justify-center mb-6 sm:mb-8 lg:mb-12 w-full"
             {...fadeUp}
-            transition={{ delay: 0.1, duration: 0.6 }}
+            transition={{ delay: 0.1 }}
           >
-            <div className="w-28 h-px bg-gray-600"></div>
-            <div className="w-3 h-3 bg-white rotate-45 opacity-60"></div>
-            <span className="text-gray-300 text-lg font-medium tracking-wider px-6">
+            <div className="w-12 sm:w-20 lg:w-28 h-px bg-gray-600"></div>
+            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rotate-45 opacity-60 "></div>
+            <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wider px-2 sm:px-4 lg:px-6 whitespace-nowrap">
               What&apos;s New Badge
             </span>
-            <div className="w-3 h-3 bg-white rotate-45 opacity-60"></div>
-            <div className="w-28 h-px bg-gray-600"></div>
+            <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rotate-45 opacity-60 "></div>
+            <div className="w-12 sm:w-20 lg:w-28 h-px bg-gray-600"></div>
           </motion.div>
 
           {/* Heading */}
           <motion.h1
-            className="text-5xl md:text-6xl font-bold text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 sm:mb-6 px-2"
             {...fadeUp}
             transition={{ delay: 0.2 }}
           >
@@ -71,121 +73,113 @@ export default function Component() {
 
           {/* Subtext */}
           <motion.div
-            className="space-y-2"
+            className="space-y-1 sm:space-y-2 px-4"
             {...fadeUp}
             transition={{ delay: 0.3 }}
           >
-            <p className="text-gray-300 text-lg">
+            <p className="text-gray-300 text-sm sm:text-base lg:text-lg">
               Discover the transformative benefits of using AI
             </p>
-            <p className="text-gray-300 text-lg">
+            <p className="text-gray-300 text-sm sm:text-base lg:text-lg">
               Create to supercharge your content production.
             </p>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Masonry Grid Layout */}
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-12 grid-rows-8 gap-4 h-[700px]">
-          {/* 1 - Large Left Card */}
+      {/* Responsive Masonry Grid Layout */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-4 lg:gap-6">
+          {/* Card 1 - Large Left */}
           <motion.div
             {...fadeUp}
-            className="col-span-7 row-span-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
+            className="sm:col-span-2 lg:col-span-7 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden"
           >
-            <div className="h-3/4 relative">
+            <div className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-60 relative">
               <Image
-                width={200}
-                height={200}
+                fill
                 src="https://framerusercontent.com/images/enXLvngj2vcYFpe8CGqBMeBLm0.svg"
                 alt="AI Insights"
-                
                 className="object-cover"
               />
             </div>
-            <div className="p-4 text-center h-1/4 flex flex-col justify-center">
-              <h3 className="text-xl font-bold text-white mb-2">
+            <div className="p-3 sm:p-4 lg:p-6 text-center">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
                 AI-Powered Insights
               </h3>
-              <p className="text-gray-300 text-xs leading-relaxed">
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
                 Leverage data-driven insights to create impactful content.
               </p>
             </div>
           </motion.div>
 
-          {/* 2 - Medium Right Top Card */}
+          {/* Card 2 - Small Right */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.1 }}
-            className="col-span-5 row-span-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
+            className="sm:col-span-2 lg:col-span-5 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden"
           >
-            <div className="h-3/4 relative">
+            <div className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-60 relative">
               <Image
-                width={200}
-                height={200}
+                fill
                 src="/AI-Subject.png"
                 alt="Automated Workflows"
-                
                 className="object-cover"
               />
             </div>
-            <div className="p-4 text-center h-1/4 flex flex-col justify-center">
-              <h3 className="text-lg font-bold text-white mb-2">
+            <div className="p-3 sm:p-4 lg:p-6 text-center">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
                 Automated Workflows
               </h3>
-              <p className="text-gray-300 text-xs leading-relaxed">
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
                 Simplify your processes with intelligent automation.
               </p>
             </div>
           </motion.div>
 
-          {/* 3 - Medium Left Bottom Card */}
+          {/* Card 3 - Small Left */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.2 }}
-            className="col-span-5 row-span-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
+            className="sm:col-span-2 lg:col-span-5 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden"
           >
-            <div className="h-3/4 relative">
+            <div className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-60 relative">
               <Image
-                width={200}
-                height={200}
+                fill
                 src="/Ai-project.png"
                 alt="Content Pipeline"
-                
                 className="object-cover"
               />
             </div>
-            <div className="p-4 text-center h-1/4 flex flex-col justify-center">
-              <h3 className="text-lg font-bold text-white mb-2">
+            <div className="p-3 sm:p-4 lg:p-6 text-center">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
                 Streamlined Content Pipeline
               </h3>
-              <p className="text-gray-300 text-xs leading-relaxed">
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
                 Organize your entire content production pipeline.
               </p>
             </div>
           </motion.div>
 
-          {/* 4 - Large Right Bottom Card */}
+          {/* Card 4 - Large Right */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.3 }}
-            className="col-span-7 row-span-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden"
+            className="sm:col-span-2 lg:col-span-7 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden"
           >
-            <div className="h-3/4 relative">
+            <div className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-60 relative">
               <Image
-                width={200}
-                height={200}
+                fill
                 src="/ai-possition.png"
                 alt="Collaborative Workspace"
-                
                 className="object-cover"
               />
             </div>
-            <div className="p-4 text-center h-1/4 flex flex-col justify-center">
-              <h3 className="text-xl font-bold text-white mb-2">
+            <div className="p-3 sm:p-4 lg:p-6 text-center">
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
                 Collaborative Workspace
               </h3>
-              <p className="text-gray-300 text-xs leading-relaxed">
+              <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
                 Empower your team with intuitive collaboration tools.
               </p>
             </div>

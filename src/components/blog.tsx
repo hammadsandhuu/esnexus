@@ -47,7 +47,7 @@ const blogPosts = [
 
 export default function GlassmorphismBlog() {
   return (
-    <div className="py-20 px-6">
+    <div id="blog" className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -107,7 +107,7 @@ export default function GlassmorphismBlog() {
               }}
             >
               {/* Content */}
-              <div className="relative z-10 h-full flex flex-col justify-between bg-black/40 backdrop-blur-sm p-4 rounded-2xl">
+              <div className="relative z-10 h-full flex flex-col justify-between rounded-2xl">
                 <div className="flex items-center gap-2 text-sm text-white/80 mb-3">
                   <span>{post.date}</span>
                   <span>•</span>

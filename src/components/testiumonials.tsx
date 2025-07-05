@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
-import { Star, Quote } from "lucide-react";
+import {  Quote } from "lucide-react";
 import {
   Carousel,
   CarouselContent,
@@ -18,7 +18,7 @@ const testimonials = [
     id: 1,
     name: "Mark L.",
     role: "Social Media Manager",
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "/p1.png",
     rating: 5,
     text: "The integration with AI tools is seamless and makes managing my content pipeline so much easier. I couldn't ask for a better starting point!",
   },
@@ -26,7 +26,7 @@ const testimonials = [
     id: 2,
     name: "Sarah K.",
     role: "Content Creator",
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "/p2.png",
     rating: 5,
     text: "This platform has revolutionized how I create and manage content. The AI features save me hours every week!",
   },
@@ -34,7 +34,7 @@ const testimonials = [
     id: 3,
     name: "David M.",
     role: "Marketing Director",
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "/p3.png",
     rating: 5,
     text: "Outstanding results! Our team's productivity has increased dramatically since we started using this platform.",
   },
@@ -42,7 +42,7 @@ const testimonials = [
     id: 4,
     name: "Emily R.",
     role: "Digital Strategist",
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "/p4.png",
     rating: 5,
     text: "The user experience is incredible. Everything flows naturally and the AI suggestions are spot-on every time.",
   },
@@ -50,7 +50,7 @@ const testimonials = [
     id: 5,
     name: "Alex T.",
     role: "Brand Manager",
-    avatar: "/placeholder.svg?height=50&width=50",
+    avatar: "/p5.png",
     rating: 5,
     text: "Game-changer for our content strategy. The quality and efficiency improvements are beyond our expectations.",
   },
@@ -71,7 +71,7 @@ export default function GlassmorphismTestimonials() {
   }, [api]);
 
   return (
-    <div className="min-h-screen py-20 px-6">
+    <div className=" py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -79,11 +79,11 @@ export default function GlassmorphismTestimonials() {
           <div className="flex justify-center mb-8">
             <div className="relative">
               <Image
-                width={200}
-                height={200}
+                width={80}
+                height={80}
                 src="https://framerusercontent.com/images/NlwVunhuEfyN5DjaTrQr5ki0.svg"
                 alt="Heart Icon"
-                className="w-20 drop-shadow-2xl"
+                className="w-20 h-full drop-shadow-2xl"
                 style={{
                   filter: "drop-shadow(0 0 20px rgba(168, 85, 247, 0.5))",
                 }}
@@ -92,10 +92,14 @@ export default function GlassmorphismTestimonials() {
           </div>
 
           {/* Label */}
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <div className="w-2 h-2 bg-white rotate-45"></div>
-            <span className="text-white text-lg font-medium">Testimonials</span>
-            <div className="w-2 h-2 bg-white rotate-45"></div>
+          <div className="flex items-center justify-center gap- mb-6">
+            <div className="w-28 h-px bg-gray-600"></div>
+            <div className="w-3 h-3 bg-white rotate-45 opacity-60 "></div>
+            <span className="text-gray-300 text-lg font-medium tracking-wider px-6">
+              Testimonials
+            </span>
+            <div className="w-3 h-3 bg-white rotate-45 opacity-60 "></div>
+            <div className="w-28 h-px bg-gray-600"></div>
           </div>
 
           {/* Heading */}
@@ -131,23 +135,26 @@ export default function GlassmorphismTestimonials() {
                 return (
                   <CarouselItem
                     key={testimonial.id}
-                    className="pl-2 md:pl-4 md:basis-1/2 lg:basis-/3"
+                    className="pl-2 md:pl-4 md:basis-1/2 lg:basis/3"
                   >
                     <div className="flex justify-center px-2">
                       <div
                         className={`w-full max-w-lg transition-all duration-500 ${
-                          isCenter ? "z-10" : "opacity-40 blur-sm"
+                          isCenter ? " z-10" : " opacity-40 blur-sm"
                         }`}
                       >
-                        <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-2xl min-h-[320px]">
+                        <div className=" bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/15 rounded-2xl p-6 shadow-2xl min-h-[320px]">
                           {/* User Info */}
-                          <div className="flex items-center gap-4 mb-6">
-                            <Image
-                              fill
-                              src={testimonial.avatar || "/placeholder.svg"}
-                              alt={testimonial.name}
-                              className="w-12 h-12 rounded-full border-2 border-white/20"
-                            />
+                          <div className="flex items-center gap-4 mb-12">
+                            <div className="relative w-12 h-12">
+                              <Image
+                                width={48}
+                                height={48}
+                                src={testimonial.avatar || "/placeholder.svg"}
+                                alt={testimonial.name}
+                                className="w-12 h-12 rounded-full border-2 border-white/20 object-cover"
+                              />
+                            </div>
                             <div>
                               <h3 className="text-white font-semibold text-lg">
                                 {testimonial.name}
@@ -171,18 +178,6 @@ export default function GlassmorphismTestimonials() {
                           <p className="text-white text-base leading-relaxed mb-4">
                             {testimonial.text}
                           </p>
-
-                          {/* Rating */}
-                          <div className="flex gap-1">
-                            {[...Array(testimonial.rating)].map((_, i) => (
-                              <Star
-                                key={i}
-                                width={16}
-                                height={16}
-                                className="text-yellow-400 fill-yellow-400"
-                              />
-                            ))}
-                          </div>
                         </div>
                       </div>
                     </div>
@@ -193,7 +188,7 @@ export default function GlassmorphismTestimonials() {
 
             {/* Controls */}
             <div className="flex items-center justify-center gap-4 mt-8">
-              <CarouselPrevious className="bg-white/10 hover:bg-white/20 border-white/20 text-white relative left-0 translate-y-0" />
+              <CarouselPrevious className="bg-white/10 cursor-pointer hover:bg-white/20 border-white/20 text-white relative left-0 translate-y-0" />
 
               {/* Dots */}
               <div className="flex gap-2 mx-4">
@@ -210,7 +205,7 @@ export default function GlassmorphismTestimonials() {
                 ))}
               </div>
 
-              <CarouselNext className="bg-white/10 hover:bg-white/20 border-white/20 text-white relative right-0 translate-y-0" />
+              <CarouselNext className="bg-white/10 cursor-pointer hover:bg-white/20 border-white/20 text-white relative right-0 translate-y-0" />
             </div>
           </Carousel>
         </div>
