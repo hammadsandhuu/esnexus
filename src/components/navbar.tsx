@@ -25,7 +25,7 @@ function Header() {
     >
       <div className="flex justify-between items-center w-full max-w-7xl px-4 sm:px-6 py-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl border border-white/10 transition-all duration-800 ease-out delay-200">
         {/* Logo */}
-        <div className="flex items-center gap-2 transition-all duration-600 ease-out delay-400">
+        <Link href={"#hero-section"} className="flex items-center gap-2 transition-all duration-600 ease-out delay-400">
           <Image
             width={32}
             height={32}
@@ -34,7 +34,7 @@ function Header() {
             className="w-6 h-6 sm:w-8 sm:h-8"
           />
           <span className="text-white font-semibold text-lg sm:text-xl">Revo</span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-6 xl:gap-8 transition-all duration-600 ease-out delay-600">
@@ -60,7 +60,7 @@ function Header() {
           href="#get-started"
           className="hidden lg:block px-4 xl:px-6 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl text-sm xl:text-base"
         >
-          Get Started
+          Start Now
         </Link>
 
         {/* Mobile Menu Button */}
@@ -117,7 +117,7 @@ function Header() {
               className="mt-4 px-6 py-3 bg-white/10 backdrop-blur-md border border-white/20 rounded-full text-white hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Get Started
+              Start Now
             </Link>
           </nav>
         </div>

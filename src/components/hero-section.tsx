@@ -12,9 +12,8 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex flex-col items-center justify-center px-4 py-32 overflow-hidden">
-
-       <Spotlight
+    <div id="hero-section" className="relative min-h-screen flex flex-col items-center justify-center px-4 py-32 overflow-hidden">
+      <Spotlight
         className="-top-40 left-0 md:-top-20  md:left-60"
         fill="white"
       />
@@ -25,10 +24,10 @@ function HeroSection() {
         }`}
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-4">
-          Revolutionize Your
+          IT Software & Design
         </h1>
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-          Content Creation Process
+          Creating better IT solutions  
         </h1>
       </div>
 
@@ -68,9 +67,7 @@ function HeroSection() {
         {/* Todo List - Responsive */}
         <div
           className={`absolute top-28 sm:top-40 md:top-52 right-2 sm:right-6 md:right-10 lg:-right-24 w-40 sm:w-48 md:w-56 lg:w-64 transition-all duration-1000 ease-out delay-500 z-10 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl ${
-            isVisible
-              ? "translate-x-0 opacity-100"
-              : "translate-x-10 opacity-0"
+            isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
           }`}
         >
           <Image

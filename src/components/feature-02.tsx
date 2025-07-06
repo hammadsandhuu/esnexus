@@ -9,7 +9,7 @@ export default function Features02() {
     <div className="min-h-screen p-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-          {/* Automated Content Generation Card */}
+          {/* Network Infrastructure Setup Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -20,27 +20,26 @@ export default function Features02() {
             <div className="space-y-4">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  Automated Content Generation
+                  Network Infrastructure Setup
                 </h3>
                 <p className="text-slate-300 text-base leading-relaxed">
-                  Generate high-quality blogs, social media posts, and more in
-                  seconds with our powerful AI algorithms, saving you time and
-                  effort.
+                  We design and implement secure, scalable network infrastructures
+                  to support your business operations and future growth.
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden h-96">
                 <Image
-                width={200}
-                height={200}
+                  width={200}
+                  height={200}
                   src="/x.png"
-                  alt="Automated Content Generation Interface"
+                  alt="Network Infrastructure Interface"
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
             </div>
           </motion.div>
 
-          {/* Smart Content Creation Tools Card */}
+          {/* Cloud Migration Services Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -51,11 +50,11 @@ export default function Features02() {
             <div className="space-y-4">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  Smart Content Creation Tools
+                  Cloud Migration Services
                 </h3>
                 <p className="text-purple-100 text-base leading-relaxed">
-                  Streamline your content workflow with AI-driven tools designed
-                  to simplify and enhance your content creation process.
+                  Seamlessly migrate your data and applications to the cloud with
+                  minimal downtime using secure and efficient methodologies.
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden h-96">
@@ -63,14 +62,14 @@ export default function Features02() {
                   width={200}
                   height={200}
                   src="/apps.png"
-                  alt="Smart Content Creation Tools Interface"
+                  alt="Cloud Migration Services Interface"
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>
             </div>
           </motion.div>
 
-          {/* Real-Time Collaboration Card */}
+          {/* Cybersecurity & Threat Monitoring Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -81,11 +80,11 @@ export default function Features02() {
             <div className="space-y-4">
               <div>
                 <h3 className="text-lg font-semibold text-white mb-2">
-                  Real-Time Collaboration
+                  Cybersecurity & Threat Monitoring
                 </h3>
                 <p className="text-slate-300 text-base leading-relaxed">
-                  Create, edit and refine content with your team in real-time.
-                  Share ideas, give feedback, and work together seamlessly.
+                  Protect your IT environment with real-time monitoring,
+                  vulnerability assessments, and advanced threat detection systems.
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden h-96">
@@ -93,7 +92,7 @@ export default function Features02() {
                   width={200}
                   height={200}
                   src="/x2.png"
-                  alt="Real-Time Collaboration Interface"
+                  alt="Cybersecurity Monitoring Interface"
                   className="w-full h-full object-cover rounded-lg"
                 />
               </div>

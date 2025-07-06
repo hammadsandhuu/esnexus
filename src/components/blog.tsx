@@ -8,38 +8,38 @@ import { motion } from "framer-motion";
 const blogPosts = [
   {
     id: 1,
-    date: "Apr 8, 2022",
-    readTime: "6 min read",
-    title: "Starting and Growing a Career in Web Design",
+    date: "Jun 20, 2025",
+    readTime: "7 min read",
+    title: "Cloud Infrastructure: Powering Modern IT Solutions",
     description:
-      "Web design careers offer growing demand, competitive salaries, and creative fulfillment in today's digital world.",
+      "Discover how cloud-based infrastructure is revolutionizing scalability, performance, and cost efficiency for businesses.",
     imagePath: "/VR.png",
   },
   {
     id: 2,
-    date: "Mar 15, 2022",
-    readTime: "8 min read",
-    title: "Create a Landing Page That Performs Great",
+    date: "May 18, 2025",
+    readTime: "6 min read",
+    title: "Cybersecurity Essentials for IT Providers",
     description:
-      "A landing page is a single-focus site with one clear goal to convert visitors into customers effectively.",
+      "Learn the critical strategies IT companies use to protect sensitive data and ensure business continuity.",
     imagePath: "/laptop.png",
   },
   {
     id: 3,
-    date: "Feb 25, 2022",
-    readTime: "6 min read",
-    title: "How Can Designers Prepare for the Future?",
+    date: "Apr 10, 2025",
+    readTime: "5 min read",
+    title: "AI Integration in IT Services",
     description:
-      "Designing for automation, AI, and the unknown future requires adaptability and continuous learning.",
+      "Explore how artificial intelligence is transforming IT solutions through automation and predictive analytics.",
     imagePath: "/drone.png",
   },
   {
     id: 4,
-    date: "Jan 10, 2022",
-    readTime: "5 min read",
-    title: "Learn more about the content creation by reading our blogs",
+    date: "Mar 28, 2025",
+    readTime: "6 min read",
+    title: "IT Consulting & Digital Transformation Insights",
     description:
-      "Discover advanced techniques and strategies for creating engaging content that converts visitors.",
+      "Gain deep insights into how IT consulting empowers organizations to scale, optimize, and digitally evolve.",
     imagePath: "/againVR.png",
     isSpecial: true,
   },
@@ -47,7 +47,7 @@ const blogPosts = [
 
 export default function GlassmorphismBlog() {
   return (
-    <div id="blog" className="py-20 px-6">
+    <div className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -79,7 +79,7 @@ export default function GlassmorphismBlog() {
           </h1>
 
           {/* Subtitle */}
-          <div className="max-w-2xl mx-auto">
+          <div id="blog" className="max-w-2xl mx-auto">
             <p className="text-gray-300 text-lg leading-relaxed">
               Discover the transformative benefits of using AI
             </p>

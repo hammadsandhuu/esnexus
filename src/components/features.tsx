@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 
 export default function Features() {
   return (
-    <div id="features" className="relative min-h-screen overflow-hidden">
+    <div  className="relative min-h-screen overflow-hidden">
       {/* Background stars */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-1/4 w-1 h-1 bg-white rounded-full opacity-60 animate-pulse"></div>
@@ -15,7 +15,7 @@ export default function Features() {
         <div className="absolute bottom-48 right-1/2 w-1 h-1 bg-white rounded-full opacity-40 animate-pulse delay-900"></div>
       </div>
 
-      {/* Content with scroll animation */}
+      {/* Scroll animation content */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -61,21 +61,22 @@ export default function Features() {
           <div className="w-28 h-px bg-gray-600"></div>
         </div>
 
-        {/* Main heading */}
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 max-w-6xl leading-tight">
-          Content Creation Made Easy
+        {/* Heading for IT Solutions */}
+        <h1 className="text-5xl md:text-6xl lg:text-6xl font-bold text-white mb-8 max-w-6xl leading-tight">
+          Innovative IT Solutions for Modern Businesses
         </h1>
 
         {/* Subtitle */}
-        <p className="text-gray-400 text-lg md:text-xl max-w-3xl leading-relaxed">
-          Streamline your content workflow with AI-driven tools designed to simplify and enhance your content creation
-          process.
+        <p id="features" className="text-gray-400 text-lg md:text-lg max-w-3xl leading-relaxed">
+          From cloud computing and cybersecurity to software development and tech consulting — our expert solutions help
+          transform your digital operations with cutting-edge technology.
         </p>
       </motion.div>
 
-      {/* Bottom gradient fade */}
+      {/* Bottom fade (empty but can add gradient if needed) */}
       <div className="absolute bottom-0 left-0 right-0 h-32"></div>
 
+      {/* Animations */}
       <style jsx>{`
         @keyframes fallDown1 {
           0% { transform: translateY(-20px) translateX(-50%); opacity: 0; }

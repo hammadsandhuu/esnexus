@@ -40,11 +40,12 @@ export default function IntegrationsSection() {
             Integrates with Your Favourite Tools
           </h1>
 
-          {/* Description */}
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
-            AI Copilot seamlessly integrates with popular platforms, enabling you
-            <br />
-            to enhance your content strategy without disrupting your workflow.
+          {/* Description with IT content */}
+          
+          <p className="text-gray-400 text-base max-w-3xl mx-auto leading-relaxed">
+            you're working in software development, cybersecurity, data analytics, or cloud infrastructure,
+            our integrations ensure your IT operations stay streamlined and efficient. Equip your tech teams with
+            the tools they rely on — without compromise.
           </p>
         </div>
 
@@ -70,7 +71,6 @@ export default function IntegrationsSection() {
               <line x1="300" y1="200" x2="120" y2="80" stroke="url(#connectionLine)" strokeWidth="1" />
               <line x1="300" y1="200" x2="480" y2="80" stroke="url(#connectionLine)" strokeWidth="1" />
               <line x1="300" y1="200" x2="80" y2="200" stroke="url(#connectionLine)" strokeWidth="1" />
-              <line x1="300" y1="200" x2="80" y2="200" stroke="url(#connectionLine)" strokeWidth="1" />
               <line x1="300" y1="200" x2="520" y2="200" stroke="url(#connectionLine)" strokeWidth="1" />
               <line x1="300" y1="200" x2="120" y2="320" stroke="url(#connectionLine)" strokeWidth="1" />
               <line x1="300" y1="200" x2="480" y2="320" stroke="url(#connectionLine)" strokeWidth="1" />
@@ -94,42 +94,36 @@ export default function IntegrationsSection() {
             </div>
 
             {/* Integration Cards */}
-            {/* Top Left - Lock */}
             <div className="absolute top-0 left-4 sm:left-20">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
                 <Lock className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
               </div>
             </div>
 
-            {/* Top Right - Zap */}
             <div className="absolute top-0 right-4 sm:right-20">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
                 <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
               </div>
             </div>
 
-            {/* Middle Left - Target */}
             <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
                 <Target className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
               </div>
             </div>
 
-            {/* Middle Right - Palette */}
             <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
                 <Palette className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
               </div>
             </div>
 
-            {/* Bottom Left - BarChart */}
             <div className="absolute bottom-0 left-4 sm:left-20">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
                 <BarChart3 className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />
               </div>
             </div>
 
-            {/* Bottom Right - Grid */}
             <div className="absolute bottom-0 right-4 sm:right-20">
               <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer">
                 <Grid3X3 className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400" />

@@ -44,19 +44,17 @@ export default function Footer() {
         {/* Description */}
         <div className="mb-8">
           <p className="text-gray-300 text-sm leading-relaxed max-w-md">
-            Revo is all you&apos;ll ever need in a template. It stands out from
-            the crowd, fully customizable and with the power of CMS, you can
-            achieve results in a matter of minutes.
+            Revo is a leading IT solutions provider, delivering tailored technology services, software development, and enterprise support to businesses worldwide. Whether you're a startup or a large-scale enterprise, we help you stay ahead with cutting-edge solutions.
           </p>
         </div>
 
         {/* Navigation Links */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
-          {/* Home */}
+          {/* IT Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Home</h3>
+            <h3 className="text-white font-semibold mb-4">IT Services</h3>
             <ul className="space-y-3">
-              {["Features", "Pricing", "Integrations", "FAQs", "Blog"].map(
+              {["Software Development", "Cloud Solutions", "Cybersecurity", "Data Analytics", "Tech Support"].map(
                 (item) => (
                   <li key={item}>
                     <a
@@ -71,11 +69,11 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* More Templates */}
+          {/* Industries */}
           <div>
-            <h3 className="text-white font-semibold mb-4">More Templates</h3>
+            <h3 className="text-white font-semibold mb-4">Industries</h3>
             <ul className="space-y-3">
-              {["Majrix", "Saved", "Ruya", "Nastira", "Bayt"].map((item) => (
+              {["Healthcare", "Finance", "E-commerce", "Education", "Real Estate"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -92,13 +90,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              {[
-                "About",
-                "Contact",
-                "Privacy Policy",
-                "Terms & Conditions",
-                "Get Template",
-              ].map((item) => (
+              {["About Us", "Careers", "Contact", "Privacy Policy", "Terms & Conditions"].map((item) => (
                 <li key={item}>
                   <a
                     href="#"
@@ -117,7 +109,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             {/* Socials */}
             <div className="text-center md:text-left">
-              <p className="text-gray-300 text-sm mb-3">Get latest updates here</p>
+              <p className="text-gray-300 text-sm mb-3">Follow us for tech updates</p>
               <div className="flex justify-center md:justify-start gap-4">
                 {[Facebook, Linkedin, Youtube, Pinterest, Instagram].map(
                   (Icon, i) => (
@@ -136,9 +128,9 @@ export default function Footer() {
             {/* Copyright */}
             <div className="text-center md:text-right">
               <p className="text-gray-400 text-xs">
-                Made by Template | Powered by Framer
+                © 2025 Revo IT Solutions. All rights reserved.
               </p>
-              <p className="text-gray-400 text-xs mt-1">Copyright 2025</p>
+              <p className="text-gray-400 text-xs mt-1">Empowering Digital Transformation</p>
             </div>
           </div>
         </div>

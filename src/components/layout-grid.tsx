@@ -34,7 +34,7 @@ export default function ResponsiveAISection() {
               />
             </div>
 
-            {/* Dotted Pattern - Hidden on mobile */}
+            {/* Dotted Pattern */}
             <div className="absolute top-8 sm:top-12 -z-10 opacity-30 hidden md:block">
               <div className="grid grid-cols-6 sm:grid-cols-8 gap-1 sm:gap-2">
                 {Array.from({ length: 48 }).map((_, i) => (
@@ -56,7 +56,7 @@ export default function ResponsiveAISection() {
             <div className="w-12 sm:w-20 lg:w-28 h-px bg-gray-600"></div>
             <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rotate-45 opacity-60 "></div>
             <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wider px-2 sm:px-4 lg:px-6 whitespace-nowrap">
-              What&apos;s New Badge
+              Latest in IT & AI
             </span>
             <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rotate-45 opacity-60 "></div>
             <div className="w-12 sm:w-20 lg:w-28 h-px bg-gray-600"></div>
@@ -68,7 +68,7 @@ export default function ResponsiveAISection() {
             {...fadeUp}
             transition={{ delay: 0.2 }}
           >
-            Content Powered by AI
+            Smarter IT Operations with AI
           </motion.h1>
 
           {/* Subtext */}
@@ -77,20 +77,21 @@ export default function ResponsiveAISection() {
             {...fadeUp}
             transition={{ delay: 0.3 }}
           >
-            <p className="text-gray-300 text-sm sm:text-base lg:text-lg">
-              Discover the transformative benefits of using AI
+            <p className="text-gray-300 text-sm sm:text-base lg:text-md">
+              Revolutionize your infrastructure, network security, and systems performance
+              with the power of Artificial Intelligence.
             </p>
-            <p className="text-gray-300 text-sm sm:text-base lg:text-lg">
-              Create to supercharge your content production.
+            <p className="text-gray-300 text-sm sm:text-base lg:text-md">
+              Automate deployments, detect threats, and scale efficiently across your IT stack.
             </p>
           </motion.div>
         </motion.div>
       </div>
 
-      {/* Responsive Masonry Grid Layout */}
+      {/* Grid Layout */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-3 sm:gap-4 lg:gap-6">
-          {/* Card 1 - Large Left */}
+          {/* Card 1 */}
           <motion.div
             {...fadeUp}
             className="sm:col-span-2 lg:col-span-7 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-xl sm:rounded-2xl overflow-hidden"
@@ -99,21 +100,21 @@ export default function ResponsiveAISection() {
               <Image
                 fill
                 src="https://framerusercontent.com/images/enXLvngj2vcYFpe8CGqBMeBLm0.svg"
-                alt="AI Insights"
+                alt="AI in IT"
                 className="object-cover"
               />
             </div>
             <div className="p-3 sm:p-4 lg:p-6 text-center">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                AI-Powered Insights
+                Predictive Monitoring
               </h3>
               <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                Leverage data-driven insights to create impactful content.
+                Identify server anomalies, performance bottlenecks, and risks before they impact your users.
               </p>
             </div>
           </motion.div>
 
-          {/* Card 2 - Small Right */}
+          {/* Card 2 */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.1 }}
@@ -129,15 +130,15 @@ export default function ResponsiveAISection() {
             </div>
             <div className="p-3 sm:p-4 lg:p-6 text-center">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Automated Workflows
+                Automated Infrastructure
               </h3>
               <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                Simplify your processes with intelligent automation.
+                Use AI to provision servers, manage cloud environments, and auto-scale your apps.
               </p>
             </div>
           </motion.div>
 
-          {/* Card 3 - Small Left */}
+          {/* Card 3 */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.2 }}
@@ -147,21 +148,21 @@ export default function ResponsiveAISection() {
               <Image
                 fill
                 src="/Ai-project.png"
-                alt="Content Pipeline"
+                alt="IT Pipelines"
                 className="object-cover"
               />
             </div>
             <div className="p-3 sm:p-4 lg:p-6 text-center">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Streamlined Content Pipeline
+                Intelligent CI/CD Pipelines
               </h3>
               <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                Organize your entire content production pipeline.
+                Streamline testing, integration, and deployment with AI-enhanced dev workflows.
               </p>
             </div>
           </motion.div>
 
-          {/* Card 4 - Large Right */}
+          {/* Card 4 */}
           <motion.div
             {...fadeUp}
             transition={{ delay: 0.3 }}
@@ -171,16 +172,16 @@ export default function ResponsiveAISection() {
               <Image
                 fill
                 src="/ai-possition.png"
-                alt="Collaborative Workspace"
+                alt="Collaborative Tools"
                 className="object-cover"
               />
             </div>
             <div className="p-3 sm:p-4 lg:p-6 text-center">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Collaborative Workspace
+                Smart Collaboration Tools
               </h3>
               <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                Empower your team with intuitive collaboration tools.
+                Enable faster decision-making and ticket resolution through AI-powered team communication.
               </p>
             </div>
           </motion.div>
