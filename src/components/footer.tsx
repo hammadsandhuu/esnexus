@@ -44,7 +44,7 @@ export default function Footer() {
         {/* Description */}
         <div className="mb-8">
           <p className="text-gray-300 text-sm leading-relaxed max-w-md">
-            Revo is a leading IT solutions provider, delivering tailored technology services, software development, and enterprise support to businesses worldwide. Whether you're a startup or a large-scale enterprise, we help you stay ahead with cutting-edge solutions.
+            Revo is a leading IT solutions provider, delivering tailored technology services, software development, and enterprise support to businesses worldwide. Whether you&apos;re a startup or a large-scale enterprise, we help you stay ahead with cutting-edge solutions.
           </p>
         </div>
 

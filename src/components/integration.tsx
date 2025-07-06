@@ -43,7 +43,7 @@ export default function IntegrationsSection() {
           {/* Description with IT content */}
           
           <p className="text-gray-400 text-base max-w-3xl mx-auto leading-relaxed">
-            you're working in software development, cybersecurity, data analytics, or cloud infrastructure,
+            you&apos;re working in software development, cybersecurity, data analytics, or cloud infrastructure,
             our integrations ensure your IT operations stay streamlined and efficient. Equip your tech teams with
             the tools they rely on — without compromise.
           </p>
