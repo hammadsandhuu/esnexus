@@ -66,7 +66,7 @@ function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMobileMenu}
-          className="lg:hidden p-2 text-white hover:text-white/80 transition-colors"
+          className=" cursor-pointer lg:hidden p-2 text-white hover:text-white/80 transition-colors"
           aria-label="Toggle mobile menu"
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
