@@ -60,7 +60,6 @@ export default function CybersecurityPage() {
 
           {/* Replacing “Services We Offer” with an Image */}
           <section>
-            
             <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg shadow-md overflow-hidden">
               <Image
                 src="/cybersecurity-1.png" // Replace with your actual image
@@ -132,7 +131,7 @@ export default function CybersecurityPage() {
         </div>
 
         {/* Right Sidebar */}
-        <aside className="bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 shadow-lg space-y-6 h-fit w-full md:w-80">
+        <aside className="md:sticky top-28 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 shadow-lg space-y-6 h-fit w-full md:w-80">
           <h3 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
             Other Services
           </h3>

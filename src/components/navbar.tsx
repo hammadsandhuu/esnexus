@@ -147,70 +147,82 @@ function Header() {
         <div className="lg:hidden absolute top-full left-4 right-4 mt-2 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl border border-white/10 shadow-2xl">
           <nav className="flex flex-col p-6 space-y-4">
             <Link
-              href="#about"
+              href="/"
               className="text-white/80 hover:text-white transition-colors py-2 border-b border-white/10"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              About
+              Home
             </Link>
 
-            {/* Mobile Features Dropdown */}
+            {/* Services Dropdown for Mobile */}
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center justify-between text-white/80 hover:text-white transition-colors py-2 border-b border-white/10 cursor-pointer w-full">
-                Features
+                Services
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent
                 className="bg-gradient-to-r from-purple-900/90 via-blue-900/90 to-purple-900/90 backdrop-blur-xl border border-white/20 text-white w-full"
                 align="start"
               >
-                <DropdownMenuItem
-                  className="hover:bg-white/10 focus:bg-white/10 cursor-pointer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  AI Content Generation
+                <DropdownMenuItem asChild>
+                  <Link
+                    href="/pages/software-development"
+                    className="w-full px-3 py-2 hover:bg-white/10"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Software Development
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem
-                  className="hover:bg-white/10 focus:bg-white/10 cursor-pointer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Smart Analytics
+                <DropdownMenuItem asChild>
+                  <Link
+                    href="/pages/mobile-app-development"
+                    className="w-full px-3 py-2 hover:bg-white/10"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Mobile App Development
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem
-                  className="hover:bg-white/10 focus:bg-white/10 cursor-pointer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Team Collaboration
+                <DropdownMenuItem asChild>
+                  <Link
+                    href="/pages/cybersecurity"
+                    className="w-full px-3 py-2 hover:bg-white/10"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Cybersecurity Services
+                  </Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem
-                  className="hover:bg-white/10 focus:bg-white/10 cursor-pointer"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  Advanced Security
+                <DropdownMenuItem asChild>
+                  <Link
+                    href="/pages/ai"
+                    className="w-full px-3 py-2 hover:bg-white/10"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    AI Services
+                  </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
 
             <Link
-              href="#integrations"
+              href="/pages/casestudies"
               className="text-white/80 hover:text-white transition-colors py-2 border-b border-white/10"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Integrations
+              Case Studies
             </Link>
             <Link
-              href="#pricing"
+              href="/pages/about"
               className="text-white/80 hover:text-white transition-colors py-2 border-b border-white/10"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Pricing
+              About Us
             </Link>
             <Link
-              href="#blog"
+              href="/pages/contactus"
               className="text-white/80 hover:text-white transition-colors py-2 border-b border-white/10"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Blog
+              Contact Us
             </Link>
             <Link
               href="#get-started"

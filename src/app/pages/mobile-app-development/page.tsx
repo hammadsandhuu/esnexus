@@ -57,8 +57,7 @@ export default function AppDevelopmentPage() {
         {/* Left Section */}
         <div className="md:col-span-3 space-y-12">
           {/* Overview */}
-          <section >
-            
+          <section>
             <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg shadow-md overflow-hidden">
               <Image
                 src="/app-1.png" // Replace with your actual image path
@@ -75,10 +74,16 @@ export default function AppDevelopmentPage() {
               Overview
             </h2>
             <p className="text-base leading-relaxed">
-              At DITECH, we specialize in delivering high-performance mobile apps tailored for your business goals. Our team crafts secure, scalable, and intuitive applications that run seamlessly across iOS and Android platforms.
+              At DITECH, we specialize in delivering high-performance mobile
+              apps tailored for your business goals. Our team crafts secure,
+              scalable, and intuitive applications that run seamlessly across
+              iOS and Android platforms.
             </p>
             <p className="mt-4 text-base">
-              Whether you&apos;re launching a startup app or a large enterprise solution, our developers bring years of experience in building feature-rich applications using modern technologies like Flutter, React Native, Kotlin, and Swift.
+              Whether you&apos;re launching a startup app or a large enterprise
+              solution, our developers bring years of experience in building
+              feature-rich applications using modern technologies like Flutter,
+              React Native, Kotlin, and Swift.
             </p>
           </section>
 
@@ -125,7 +130,7 @@ export default function AppDevelopmentPage() {
         </div>
 
         {/* Right Sidebar */}
-        <aside className="bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 shadow-lg space-y-6 h-fit w-full md:w-80">
+        <aside className="md:sticky top-28 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl p-6 sm:p-8 shadow-lg space-y-6 h-fit w-full md:w-80">
           <h3 className="text-lg sm:text-xl font-semibold bg-gradient-to-r from-purple-400 to-blue-400 text-transparent bg-clip-text">
             Other Services
           </h3>
@@ -133,14 +138,19 @@ export default function AppDevelopmentPage() {
           <ul className="space-y-3">
             {[
               { label: "Cybersecurity", href: "/pages/cybersecurity" },
-              { label: "Software Development", href: "/pages/software-development" },
+              {
+                label: "Software Development",
+                href: "/pages/software-development",
+              },
               { label: "AI Services", href: "/pages/ai" },
             ].map(({ label, href }, idx) => (
               <li key={idx}>
                 <Link href={href}>
-                  <div className="text-white bg-gradient-to-r from-purple-800/30 via-blue-800/30 to-purple-800/30 
+                  <div
+                    className="text-white bg-gradient-to-r from-purple-800/30 via-blue-800/30 to-purple-800/30 
                     backdrop-blur-md border border-white/10 rounded-xl px-4 py-2 font-medium 
-                    hover:scale-[1.02] transition-all duration-200 cursor-pointer">
+                    hover:scale-[1.02] transition-all duration-200 cursor-pointer"
+                  >
                     {label}
                   </div>
                 </Link>
