@@ -1,21 +1,27 @@
-"use client"
+"use client";
 
-import Image from "next/image"
-import Link from "next/link"
-import { useEffect, useState } from "react"
-import { Menu, X } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Menu, X, ChevronDown } from "lucide-react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 function Header() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true)
-  }, [])
+    setIsVisible(true);
+  }, []);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)
-  }
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <div
@@ -25,7 +31,10 @@ function Header() {
     >
       <div className="flex justify-between items-center w-full max-w-7xl px-4 sm:px-6 py-4 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl border border-white/10 transition-all duration-800 ease-out delay-200">
         {/* Logo */}
-        <Link href={"#hero-section"} className="flex items-center gap-2 transition-all duration-600 ease-out delay-400">
+        <Link
+          href={"/"}
+          className="flex items-center gap-2 transition-all duration-600 ease-out delay-400"
+        >
           <Image
             width={32}
             height={32}
@@ -33,25 +42,85 @@ function Header() {
             alt="Revo Logo"
             className="w-6 h-6 sm:w-8 sm:h-8"
           />
-          <span className="text-white font-semibold text-lg sm:text-xl">Revo</span>
+          <span className="text-white font-semibold text-lg sm:text-xl">
+            Revo
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex gap-6 xl:gap-8 transition-all duration-600 ease-out delay-600">
-          <Link href="#about" className="text-white/80 hover:text-white transition-colors text-sm xl:text-base">
-            About
+          <Link
+            href="/"
+            className="text-white/80 hover:text-white transition-colors text-sm xl:text-base"
+          >
+            Home
           </Link>
-          <Link href="#features" className="text-white/80 hover:text-white transition-colors text-sm xl:text-base">
-            Features
+
+          {/* Features Dropdown */}
+          <DropdownMenu>
+            <DropdownMenuTrigger className="flex items-center gap-1 text-white/80 hover:text-white transition-colors text-sm xl:text-base cursor-pointer">
+              Services
+              <ChevronDown className=" w-4 h-4" />
+            </DropdownMenuTrigger>
+            <DropdownMenuContent
+              className="space-y-2 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl border border-white/10 text-white"
+              align="center"
+            >
+              <DropdownMenuItem asChild>
+                <Link
+                  href="/pages/software-development"
+                  className="w-full px-3 py-2 cursor-pointer rounded-2xl transition hover:bg-white/10"
+                >
+                  Software Development
+                </Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link
+                  href="/pages/mobile-app-development"
+                  className="w-full px-3 py-2 cursor-pointer rounded-2xl transition hover:bg-white/10"
+                >
+                  Mobile App Development
+                </Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link
+                  href="/pages/cybersecurity"
+                  className="w-full px-3 py-2 cursor-pointer rounded-2xl transition hover:bg-white/10"
+                >
+                  Cybersecurity Services
+                </Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem asChild>
+                <Link
+                  href="/pages/ai"
+                  className="w-full px-3 py-2 cursor-pointer rounded-2xl transition hover:bg-white/10"
+                >
+                  AI Services
+                </Link>
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+
+          <Link
+            href="/pages/casestudies"
+            className="text-white/80 hover:text-white transition-colors text-sm xl:text-base"
+          >
+            Case Studies
           </Link>
-          <Link href="#integrations" className="text-white/80 hover:text-white transition-colors text-sm xl:text-base">
-            Integrations
+          <Link
+            href="/pages/about"
+            className="text-white/80 hover:text-white transition-colors text-sm xl:text-base"
+          >
+            About Us
           </Link>
-          <Link href="#pricing" className="text-white/80 hover:text-white transition-colors text-sm xl:text-base">
-            Pricing
-          </Link>
-          <Link href="#blog" className="text-white/80 hover:text-white transition-colors text-sm xl:text-base">
-            Blog
+          <Link
+            href="/pages/contactus"
+            className="text-white/80 hover:text-white transition-colors text-sm xl:text-base"
+          >
+            Contact Us
           </Link>
         </nav>
 
@@ -84,13 +153,44 @@ function Header() {
             >
               About
             </Link>
-            <Link
-              href="#features"
-              className="text-white/80 hover:text-white transition-colors py-2 border-b border-white/10"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Features
-            </Link>
+
+            {/* Mobile Features Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center justify-between text-white/80 hover:text-white transition-colors py-2 border-b border-white/10 cursor-pointer w-full">
+                Features
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent
+                className="bg-gradient-to-r from-purple-900/90 via-blue-900/90 to-purple-900/90 backdrop-blur-xl border border-white/20 text-white w-full"
+                align="start"
+              >
+                <DropdownMenuItem
+                  className="hover:bg-white/10 focus:bg-white/10 cursor-pointer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  AI Content Generation
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  className="hover:bg-white/10 focus:bg-white/10 cursor-pointer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Smart Analytics
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  className="hover:bg-white/10 focus:bg-white/10 cursor-pointer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Team Collaboration
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  className="hover:bg-white/10 focus:bg-white/10 cursor-pointer"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Advanced Security
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             <Link
               href="#integrations"
               className="text-white/80 hover:text-white transition-colors py-2 border-b border-white/10"
@@ -123,7 +223,7 @@ function Header() {
         </div>
       )}
     </div>
-  )
+  );
 }
 
-export default Header
+export default Header;
