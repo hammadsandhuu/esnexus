@@ -56,7 +56,7 @@ export default function ResponsiveAISection() {
             <div className="w-12 sm:w-20 lg:w-28 h-px bg-gray-600"></div>
             <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rotate-45 opacity-60 "></div>
             <span className="text-gray-300 text-sm sm:text-base lg:text-lg font-medium tracking-wider px-2 sm:px-4 lg:px-6 whitespace-nowrap">
-              Latest in IT & AI
+              Our Core Services{" "}
             </span>
             <div className="w-2 h-2 sm:w-3 sm:h-3 bg-white rotate-45 opacity-60 "></div>
             <div className="w-12 sm:w-20 lg:w-28 h-px bg-gray-600"></div>
@@ -68,7 +68,7 @@ export default function ResponsiveAISection() {
             {...fadeUp}
             transition={{ delay: 0.2 }}
           >
-            Smarter IT Operations with AI
+            Explore Our Specialized Offerings
           </motion.h1>
 
           {/* Subtext */}
@@ -78,11 +78,9 @@ export default function ResponsiveAISection() {
             transition={{ delay: 0.3 }}
           >
             <p className="text-gray-300 text-sm sm:text-base lg:text-md">
-              Revolutionize your infrastructure, network security, and systems performance
-              with the power of Artificial Intelligence.
-            </p>
-            <p className="text-gray-300 text-sm sm:text-base lg:text-md">
-              Automate deployments, detect threats, and scale efficiently across your IT stack.
+              We provide tailored IT solutions in AI, software engineering,
+              cybersecurity, and mobile app development to empower your digital
+              journey.
             </p>
           </motion.div>
         </motion.div>
@@ -106,10 +104,11 @@ export default function ResponsiveAISection() {
             </div>
             <div className="p-3 sm:p-4 lg:p-6 text-center">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Predictive Monitoring
+                AI Services
               </h3>
               <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                Identify server anomalies, performance bottlenecks, and risks before they impact your users.
+                Develop smart applications with NLP, ML, and predictive
+                analytics to improve engagement and automate operations.
               </p>
             </div>
           </motion.div>
@@ -130,10 +129,11 @@ export default function ResponsiveAISection() {
             </div>
             <div className="p-3 sm:p-4 lg:p-6 text-center">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Automated Infrastructure
+                Software Services
               </h3>
               <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                Use AI to provision servers, manage cloud environments, and auto-scale your apps.
+                From enterprise applications to tailored platforms, we deliver
+                robust and scalable digital solutions.
               </p>
             </div>
           </motion.div>
@@ -154,10 +154,11 @@ export default function ResponsiveAISection() {
             </div>
             <div className="p-3 sm:p-4 lg:p-6 text-center">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Intelligent CI/CD Pipelines
+                Cybersecurity Services
               </h3>
               <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                Streamline testing, integration, and deployment with AI-enhanced dev workflows.
+                Shield your infrastructure from threats with proactive
+                monitoring, audits, and encrypted systems.
               </p>
             </div>
           </motion.div>
@@ -178,10 +179,11 @@ export default function ResponsiveAISection() {
             </div>
             <div className="p-3 sm:p-4 lg:p-6 text-center">
               <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-2">
-                Smart Collaboration Tools
+                App Development{" "}
               </h3>
               <p className="text-gray-300 text-xs sm:text-sm lg:text-base leading-relaxed">
-                Enable faster decision-making and ticket resolution through AI-powered team communication.
+                Build smooth, high-performance mobile apps for iOS & Android
+                tailored to your brand and goals.
               </p>
             </div>
           </motion.div>
