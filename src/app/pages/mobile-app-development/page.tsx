@@ -78,7 +78,7 @@ export default function AppDevelopmentPage() {
               At DITECH, we specialize in delivering high-performance mobile apps tailored for your business goals. Our team crafts secure, scalable, and intuitive applications that run seamlessly across iOS and Android platforms.
             </p>
             <p className="mt-4 text-base">
-              Whether you're launching a startup app or a large enterprise solution, our developers bring years of experience in building feature-rich applications using modern technologies like Flutter, React Native, Kotlin, and Swift.
+              Whether you&apos;re launching a startup app or a large enterprise solution, our developers bring years of experience in building feature-rich applications using modern technologies like Flutter, React Native, Kotlin, and Swift.
             </p>
           </section>
 

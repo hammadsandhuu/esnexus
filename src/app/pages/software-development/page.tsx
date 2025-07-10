@@ -84,7 +84,7 @@ export default function SoftwareDevelopmentPage() {
             </p>
             <p className="mt-4 text-base">
               Our software engineers follow efficient processes to deliver on
-              time, with modern tech and maintainable code. Whether you're
+              time, with modern tech and maintainable code. Whether you&apos; re
               building a custom CRM, ERP, or mobile product, we craft each
               solution to meet exact needs.
             </p>
