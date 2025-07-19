@@ -97,7 +97,7 @@ export default function ResponsiveAISection() {
             <div className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-60 relative">
               <Image
                 fill
-                src="https://framerusercontent.com/images/enXLvngj2vcYFpe8CGqBMeBLm0.svg"
+                src="/AI Services.png"
                 alt="AI in IT"
                 className="object-cover"
               />
@@ -122,7 +122,7 @@ export default function ResponsiveAISection() {
             <div className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-60 relative">
               <Image
                 fill
-                src="/AI-Subject.png"
+                src="/Software Services.png"
                 alt="Automated Workflows"
                 className="object-cover"
               />
@@ -147,7 +147,7 @@ export default function ResponsiveAISection() {
             <div className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-60 relative">
               <Image
                 fill
-                src="/Ai-project.png"
+                src="/cyber security image.png"
                 alt="IT Pipelines"
                 className="object-cover"
               />
@@ -172,7 +172,7 @@ export default function ResponsiveAISection() {
             <div className="h-32 sm:h-40 md:h-48 lg:h-56 xl:h-60 relative">
               <Image
                 fill
-                src="/ai-possition.png"
+                src="/App Development.png"
                 alt="Collaborative Tools"
                 className="object-cover"
               />

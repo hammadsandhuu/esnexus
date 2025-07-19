@@ -36,15 +36,12 @@ function Header() {
           className="flex items-center gap-2 transition-all duration-600 ease-out delay-400"
         >
           <Image
-            width={32}
-            height={32}
-            src="https://framerusercontent.com/images/zwQHAxHH7zmQIuOxNaVLTq7oHk.svg"
+            src="/ESnexus_logo.png"
             alt="Revo Logo"
-            className="w-6 h-6 sm:w-8 sm:h-8"
+            width={120}
+            height={120}
+            className="h-12 sm:h-12 md:h-12 lg:h-12 xl:h-12 w-auto object-contain"
           />
-          <span className="text-white font-semibold text-lg sm:text-xl">
-            Revo
-          </span>
         </Link>
 
         {/* Desktop Navigation */}

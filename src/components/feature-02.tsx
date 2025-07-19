@@ -31,7 +31,7 @@ export default function Features02() {
                 <Image
                   width={200}
                   height={200}
-                  src="/x.png"
+                  src="/Network Infrastructure Setup image 1.png"
                   alt="Network Infrastructure Interface"
                   className="w-full h-full object-cover rounded-lg"
                 />
@@ -91,7 +91,7 @@ export default function Features02() {
                 <Image
                   width={200}
                   height={200}
-                  src="/x2.png"
+                  src="/Network Infrastructure Setup image 2.png"
                   alt="Cybersecurity Monitoring Interface"
                   className="w-full h-full object-cover rounded-lg"
                 />

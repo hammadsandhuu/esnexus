@@ -62,7 +62,7 @@ export default function CybersecurityPage() {
           <section>
             <div className="relative w-full h-64 sm:h-80 md:h-96 rounded-lg shadow-md overflow-hidden">
               <Image
-                src="/cybersecurity-1.png" // Replace with your actual image
+                src="/Cybersecurity Services.png" // Replace with your actual image
                 alt="Cybersecurity Process"
                 fill
                 className="object-cover opacity-70"
