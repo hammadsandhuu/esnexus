@@ -11,16 +11,23 @@ import {
   Smartphone,
   LayoutTemplate,
   Sliders,
+  BrainCircuit,
+  Cpu,
+  Bot,
+  ScanEye,
+  Network,
+  DatabaseZap,
+  Activity,
 } from "lucide-react";
 
 const iconList = [
-  { icon: Code, label: "BUILD" },
-  { icon: Wrench, label: "RELEASE" },
-  { icon: ShieldCheck, label: "TEST" },
-  { icon: MonitorPlay, label: "MONITOR" },
-  { icon: Smartphone, label: "DEPLOY" },
-  { icon: LayoutTemplate, label: "PLAN" },
-  { icon: Sliders, label: "OPERATE" },
+  { icon: BrainCircuit, label: "AI LOGIC" }, // Represents neural networks / ML
+  { icon: Cpu, label: "ML MODELS" }, // CPU / processing intelligence
+  { icon: Bot, label: "AUTOMATION" }, // AI bots, assistants
+  { icon: ScanEye, label: "VISION" }, // Computer vision
+  { icon: Network, label: "DATA FLOW" }, // AI pipelines / connected systems
+  { icon: DatabaseZap, label: "BIG DATA" }, // Training data / fast queries
+  { icon: Activity, label: "PREDICT" }, // Predictive analytics / decision making
 ];
 
 const reasons = [

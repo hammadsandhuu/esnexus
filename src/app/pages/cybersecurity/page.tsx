@@ -11,17 +11,25 @@ import {
   Smartphone,
   LayoutTemplate,
   Sliders,
+  Shield,
+  Eye,
+  Bug,
+  Server,
+  ActivitySquare,
+  KeyRound,
+  Lock,
 } from "lucide-react";
 
 const iconList = [
-  { icon: Code, label: "BUILD" },
-  { icon: Wrench, label: "RELEASE" },
-  { icon: ShieldCheck, label: "TEST" },
-  { icon: MonitorPlay, label: "MONITOR" },
-  { icon: Smartphone, label: "DEPLOY" },
-  { icon: LayoutTemplate, label: "PLAN" },
-  { icon: Sliders, label: "OPERATE" },
+  { icon: Shield, label: "Firewall" },
+  { icon: Lock, label: "Encryption" },
+  { icon: Eye, label: "Monitoring" },
+  { icon: Bug, label: "Vulnerability" },
+  { icon: Server, label: "Network" },
+  { icon: ActivitySquare, label: "Threats" },
+  { icon: KeyRound, label: "Authentication" },
 ];
+
 
 const reasons = [
   "Proactive threat detection and incident response to keep your systems secure.",

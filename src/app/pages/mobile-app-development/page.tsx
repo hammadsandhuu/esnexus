@@ -11,17 +11,24 @@ import {
   Smartphone,
   LayoutTemplate,
   Sliders,
+  Bug,
+  Database,
+  Cloud,
+  GitBranch,
+  UserCheck,
+  Settings2,
 } from "lucide-react";
 
 const iconList = [
-  { icon: Code, label: "BUILD" },
-  { icon: Wrench, label: "RELEASE" },
-  { icon: ShieldCheck, label: "TEST" },
-  { icon: MonitorPlay, label: "MONITOR" },
-  { icon: Smartphone, label: "DEPLOY" },
-  { icon: LayoutTemplate, label: "PLAN" },
-  { icon: Sliders, label: "OPERATE" },
+  { icon: UserCheck, label: "UX Design" },
+  { icon: Database, label: "Backend" },
+  { icon: GitBranch, label: "Versioning" },
+  { icon: Bug, label: "Debugging" },
+  { icon: Cloud, label: "Cloud" },
+  { icon: Smartphone, label: "Deployment" },
+  { icon: MonitorPlay, label: "Monitoring" },
 ];
+
 
 const reasons = [
   "Expertise in both Android and iOS platforms with native and cross-platform development.",

@@ -10,17 +10,24 @@ import {
   Smartphone,
   LayoutTemplate,
   Sliders,
+  GitBranch,
+  Database,
+  BrainCircuit,
+  Folders,
+  Puzzle,
+  ClipboardList,
+  Laptop,
 } from "lucide-react";
 import Link from "next/link";
 
 const iconList = [
-  { icon: Code, label: "BUILD" },
-  { icon: Wrench, label: "RELEASE" },
-  { icon: ShieldCheck, label: "TEST" },
-  { icon: MonitorPlay, label: "MONITOR" },
-  { icon: Smartphone, label: "DEPLOY" },
-  { icon: LayoutTemplate, label: "PLAN" },
-  { icon: Sliders, label: "OPERATE" },
+  { icon: Laptop, label: "DEVELOP" }, // Core software dev
+  { icon: GitBranch, label: "VERSIONING" }, // Git-based development
+  { icon: Database, label: "DATABASE" }, // DB integration
+  { icon: BrainCircuit, label: "AI LOGIC" }, // AI/ML powered logic
+  { icon: Folders, label: "ARCHITECTURE" }, // Code/file structure
+  { icon: Puzzle, label: "INTEGRATE" }, // APIs/modules
+  { icon: ClipboardList, label: "QA TESTING" }, // Quality assurance
 ];
 
 const services = [
