@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import {
   Facebook,
   Linkedin,
@@ -20,13 +21,12 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
-              width={200}
-              height={200}
-              src="https://framerusercontent.com/images/zwQHAxHH7zmQIuOxNaVLTq7oHk.svg"
+              src="/ESnexus_logo.png"
               alt="Revo Logo"
-              className="w-8 h-8"
+              width={120}
+              height={120}
+              className="h-12 sm:h-12 md:h-12 lg:h-12 xl:h-12 w-auto object-contain"
             />
-            <span className="text-white text-xl font-semibold">Revo</span>
           </div>
 
           {/* Email Signup */}
@@ -50,25 +50,23 @@ export default function Footer() {
 
         {/* Navigation Links */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-8">
-          {/* IT Services */}
-
-          {/* Industries */}
+          {/* Solutions */}
           <div>
             <h3 className="text-white font-semibold mb-4">Solutions</h3>
             <ul className="space-y-3">
               {[
-                "Software Development",
-                "Mobile App Development",
-                "Cybersecurity Services",
-                "AI Services",
-              ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
+                { label: "Software Development", path: "/pages/software-development" },
+                { label: "Mobile App Development", path: "/pages/mobile-app-development" },
+                { label: "Cybersecurity Services", path: "/pages/cybersecurity" },
+                { label: "AI Services", path: "/pages/ai" },
+              ].map(({ label, path }) => (
+                <li key={label}>
+                  <Link
+                    href={path}
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
-                    {item}
-                  </a>
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -78,33 +76,40 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
-              {["About Us", "Contact Us"].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#"
+              {[
+                { label: "About Us", path: "pages/about" },
+                { label: "Contact Us", path: "/pages/contactus" },
+              ].map(({ label, path }) => (
+                <li key={label}>
+                  <Link
+                    href={path}
                     className="text-gray-300 hover:text-white text-sm transition-colors"
                   >
-                    {item}
-                  </a>
+                    {label}
+                  </Link>
                 </li>
               ))}
             </ul>
           </div>
+
+          {/* Contact Info */}
           <div>
             <h3 className="text-white font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-3">
-              {["Stanford, VA", "info@esnexus.com", "2792545558"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="text-gray-300 hover:text-white text-sm transition-colors"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                { label: "Stanford, VA", path: "/contactus" },
+                { label: "info@esnexus.com", path: "mailto:info@esnexus.com" },
+                { label: "2792545558", path: "tel:2792545558" },
+              ].map(({ label, path }) => (
+                <li key={label}>
+                  <Link
+                    href={path}
+                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
@@ -118,25 +123,28 @@ export default function Footer() {
                 Follow us for tech updates
               </p>
               <div className="flex justify-center md:justify-start gap-4">
-                {[Facebook, Linkedin, Youtube, Pinterest, Instagram].map(
-                  (Icon, i) => (
-                    <a
-                      key={i}
-                      href="#"
-                      className="text-gray-400 hover:text-white transition-colors"
-                    >
-                      <Icon size={20} />
-                    </a>
-                  )
-                )}
+                {[
+                  { icon: Facebook, link: "https://facebook.com" },
+                  { icon: Linkedin, link: "https://linkedin.com" },
+                  { icon: Youtube, link: "https://youtube.com" },
+                  { icon: Pinterest, link: "https://pinterest.com" },
+                  { icon: Instagram, link: "https://instagram.com" },
+                ].map(({ icon: Icon, link }, i) => (
+                  <Link
+                    key={i}
+                    href={link}
+                    target="_blank"
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
+                    <Icon size={20} />
+                  </Link>
+                ))}
               </div>
             </div>
 
             {/* Copyright */}
             <div className="text-center md:text-right">
-              <p className="text-gray-400 text-xs">
-              © Copyright 2023. Esnexus
-              </p>
+              <p className="text-gray-400 text-xs">© Copyright 2023. Esnexus</p>
             </div>
           </div>
         </div>
