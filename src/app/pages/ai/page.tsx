@@ -4,13 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   CheckCircle,
-  Code,
-  Wrench,
-  MonitorPlay,
-  ShieldCheck,
-  Smartphone,
-  LayoutTemplate,
-  Sliders,
   BrainCircuit,
   Cpu,
   Bot,

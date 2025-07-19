@@ -4,19 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   CheckCircle,
-  Code,
-  Wrench,
   MonitorPlay,
-  ShieldCheck,
   Smartphone,
-  LayoutTemplate,
-  Sliders,
   Bug,
   Database,
   Cloud,
   GitBranch,
   UserCheck,
-  Settings2,
 } from "lucide-react";
 
 const iconList = [

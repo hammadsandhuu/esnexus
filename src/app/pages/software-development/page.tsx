@@ -3,13 +3,6 @@
 import Image from "next/image";
 import {
   CheckCircle,
-  Code,
-  Wrench,
-  MonitorPlay,
-  ShieldCheck,
-  Smartphone,
-  LayoutTemplate,
-  Sliders,
   GitBranch,
   Database,
   BrainCircuit,
