@@ -1,16 +1,24 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   Facebook,
   Linkedin,
   Youtube,
-  PinIcon as Pinterest,
   Instagram,
+  PinIcon,
+  Mail,
+  Phone,
+  Code,
+  Smartphone,
+  ShieldCheck,
+  MonitorPlay,
+  LayoutTemplate,
+  Sliders,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -55,17 +63,17 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Solutions</h3>
             <ul className="space-y-3">
               {[
-                { label: "Software Development", path: "/pages/software-development" },
-                { label: "Mobile App Development", path: "/pages/mobile-app-development" },
-                { label: "Cybersecurity Services", path: "/pages/cybersecurity" },
-                { label: "AI Services", path: "/pages/ai" },
-              ].map(({ label, path }) => (
+                { label: "Software Development", path: "/pages/software-development", icon: Code },
+                { label: "Mobile App Development", path: "/pages/mobile-app-development", icon: Smartphone },
+                { label: "Cybersecurity Services", path: "/pages/cybersecurity", icon: ShieldCheck },
+                { label: "AI Services", path: "/pages/ai", icon: MonitorPlay },
+              ].map(({ label, path, icon: Icon }) => (
                 <li key={label}>
                   <Link
                     href={path}
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                    className="flex items-center gap-2 text-gray-300 hover:text-white text-sm transition-colors"
                   >
-                    {label}
+                    <Icon size={16} /> {label}
                   </Link>
                 </li>
               ))}
@@ -77,15 +85,15 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               {[
-                { label: "About Us", path: "pages/about" },
-                { label: "Contact Us", path: "/pages/contactus" },
-              ].map(({ label, path }) => (
+                { label: "About Us", path: "/pages/about", icon: LayoutTemplate },
+                { label: "Contact Us", path: "/pages/contactus", icon: Sliders },
+              ].map(({ label, path, icon: Icon }) => (
                 <li key={label}>
                   <Link
                     href={path}
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                    className="flex items-center gap-2 text-gray-300 hover:text-white text-sm transition-colors"
                   >
-                    {label}
+                    <Icon size={16} /> {label}
                   </Link>
                 </li>
               ))}
@@ -97,16 +105,16 @@ export default function Footer() {
             <h3 className="text-white font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-3">
               {[
-                { label: "Stanford, VA", path: "/contactus" },
-                { label: "info@esnexus.com", path: "mailto:info@esnexus.com" },
-                { label: "2792545558", path: "tel:2792545558" },
-              ].map(({ label, path }) => (
+                { label: "Stanford, VA", path: "/contactus", icon: PinIcon },
+                { label: "info@esnexus.com", path: "mailto:info@esnexus.com", icon: Mail },
+                { label: "2792545558", path: "tel:2792545558", icon: Phone },
+              ].map(({ label, path, icon: Icon }) => (
                 <li key={label}>
                   <Link
                     href={path}
-                    className="text-gray-300 hover:text-white text-sm transition-colors"
+                    className="flex items-center gap-2 text-gray-300 hover:text-white text-sm transition-colors"
                   >
-                    {label}
+                    <Icon size={16} /> {label}
                   </Link>
                 </li>
               ))}
@@ -124,19 +132,20 @@ export default function Footer() {
               </p>
               <div className="flex justify-center md:justify-start gap-4">
                 {[
-                  { icon: Facebook, link: "https://facebook.com" },
-                  { icon: Linkedin, link: "https://linkedin.com" },
-                  { icon: Youtube, link: "https://youtube.com" },
-                  { icon: Pinterest, link: "https://pinterest.com" },
-                  { icon: Instagram, link: "https://instagram.com" },
-                ].map(({ icon: Icon, link }, i) => (
+                  { icon: Facebook, link: "https://facebook.com", label: "Facebook" },
+                  { icon: Linkedin, link: "https://linkedin.com", label: "LinkedIn" },
+                  { icon: Youtube, link: "https://youtube.com", label: "YouTube" },
+                  { icon: Instagram, link: "https://instagram.com", label: "Instagram" },
+                ].map(({ icon: Icon, link, label }, i) => (
                   <Link
                     key={i}
                     href={link}
                     target="_blank"
-                    className="text-gray-400 hover:text-white transition-colors"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    className="text-gray-400 hover:text-white transition-colors duration-300"
                   >
-                    <Icon size={20} />
+                    <Icon size={24} />
                   </Link>
                 ))}
               </div>
