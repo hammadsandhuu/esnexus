@@ -8,7 +8,6 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function ContactSection() {
-  const [activeTab, setActiveTab] = useState("address");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,7 +45,7 @@ export default function ContactSection() {
             Contact Us
           </h2>
           <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">
-            We'd love to hear from you. Get in touch using the form or details below.
+            We&apos;d love to hear from you. Get in touch using the form or details below.
           </p>
         </div>
 
@@ -58,7 +57,7 @@ export default function ContactSection() {
                 Need Help?
               </h1>
               <p className="text-white text-lg">
-                Reach out to the world's most reliable IT services.
+                Reach out to the world&apos;s most reliable IT services.
               </p>
             </div>
 
