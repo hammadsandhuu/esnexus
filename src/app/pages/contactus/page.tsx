@@ -38,32 +38,31 @@ export default function ContactSection() {
         <div className="absolute top-40 right-1/4 w-64 h-64 bg-blue-500/10 rounded-full blur-2xl"></div>
         <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
       </div>
+
       <div className="max-w-7xl mx-auto">
-        {/* Contact Us Heading */}
+        {/* Heading */}
         <div className="mb-12 text-center">
           <h2 className="text-4xl sm:text-5xl font-bold text-white tracking-tight">
             Contact Us
           </h2>
           <p className="mt-4 text-white/80 text-lg max-w-2xl mx-auto">
-            We&apos;d love to hear from you. Get in touch using the form or details
-            below.
+            We'd love to hear from you. Get in touch using the form or details below.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Side - Contact Form */}
+          {/* Contact Form */}
           <div className="bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-12 shadow-sm">
             <div className="mb-8">
               <h1 className="text-3xl lg:text-4xl font-bold text-white mb-4">
                 Need Help?
               </h1>
               <p className="text-white text-lg">
-                Reach out to the world&apos;s most reliable IT services.
+                Reach out to the world's most reliable IT services.
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name and Email Row */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Input
                   type="text"
@@ -85,7 +84,6 @@ export default function ContactSection() {
                 />
               </div>
 
-              {/* Phone */}
               <Input
                 type="tel"
                 name="phone"
@@ -95,7 +93,6 @@ export default function ContactSection() {
                 className="h-12 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-lg px-4 text-white placeholder:text-white focus:border-cyan-400 focus:ring-cyan-400"
               />
 
-              {/* Message */}
               <Textarea
                 name="message"
                 placeholder="Please describe what you need. *"
@@ -105,7 +102,6 @@ export default function ContactSection() {
                 required
               />
 
-              {/* Submit Button */}
               <div className="pt-4">
                 <Button
                   type="submit"
@@ -117,99 +113,48 @@ export default function ContactSection() {
             </form>
           </div>
 
-          {/* Right Side - Contact Information */}
+          {/* Address Section Only */}
           <div className="bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-2xl p-8 lg:p-12 shadow-sm">
-            {/* Tabs */}
             <div className="flex mb-8">
               <button
-                onClick={() => setActiveTab("address")}
-                className={`px-6 py-3 font-medium text-lg transition-colors duration-200 border-b-2 ${
-                  activeTab === "address"
-                    ? "text-cyan-400 border-cyan-400"
-                    : "text-white border-transparent cursor-pointer"
-                }`}
+                className="px-6 py-3 font-medium text-lg text-cyan-400 border-b-2 border-cyan-400"
+                disabled
               >
                 Address
               </button>
-              <button
-                onClick={() => setActiveTab("maps")}
-                className={`px-6 py-3 font-medium text-lg transition-colors duration-200 border-b-2 ml-8 ${
-                  activeTab === "maps"
-                    ? "text-cyan-400 border-cyan-400"
-                    : "text-white border-transparent cursor-pointer"
-                }`}
-              >
-                Google Maps
-              </button>
             </div>
 
-            {/* Tab Content */}
-            {activeTab === "address" && (
-              <div className="space-y-8">
-                {/* Location */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-cyan-400" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white text-lg mb-2">
-                      OUR LOCATION
-                    </h3>
-                    <p className="text-white">
-                      7432 Colshire Dr Mclean VA 22102
-                    </p>
+            <div className="space-y-8">
+              {/* Location */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-cyan-400" />
                   </div>
                 </div>
-
-                {/* Email */}
-                <div className="flex items-start space-x-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-cyan-400" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-white text-lg mb-2">
-                      SEND US MAIL
-                    </h3>
-                    <p className="text-white">info@esnexus.com</p>
-                  </div>
+                <div>
+                  <h3 className="font-semibold text-white text-lg mb-2">
+                    OUR LOCATION
+                  </h3>
+                  <p className="text-white">Stanford, VA</p>
                 </div>
               </div>
-            )}
 
-            {activeTab === "maps" && (
-              <div className="space-y-6">
-                <div className="w-full h-64 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-4" />
-                    <p className="text-gray-500">
-                      Google Maps integration would go here
-                    </p>
-                    <p className="text-sm text-gray-400 mt-2">
-                      7432 Colshire Dr Mclean VA 22102
-                    </p>
+              {/* Email */}
+              <div className="flex items-start space-x-4">
+                <div className="flex-shrink-0">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-white/10 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-cyan-400" />
                   </div>
                 </div>
-
-                <div className="text-center">
-                  <Button
-                    variant="outline"
-                    className="bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-2xl border border-white/10 text-cyan-400 cursor-pointer"
-                    onClick={() =>
-                      window.open(
-                        "https://maps.google.com/?q=7432+Colshire+Dr+Mclean+VA+22102",
-                        "_blank"
-                      )
-                    }
-                  >
-                    Open in Google Maps
-                  </Button>
+                <div>
+                  <h3 className="font-semibold text-white text-lg mb-2">
+                    SEND US MAIL
+                  </h3>
+                  <p className="text-white">info@esnexus.com</p>
                 </div>
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
